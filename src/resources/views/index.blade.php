@@ -52,7 +52,7 @@
             <!-- 男性 -->
             <div class="form__group-check">
                 <div class="form__input--check">
-                    <input type="checkbox" name="gender" value="{{ old('gender') }}" />
+                    <input type="radio" name="gender" value="{{ old('gender') }}" />
                     <span class="form__check--label">男性</span>
                 </div>
                 <div class="form__error">
@@ -64,7 +64,7 @@
             <!-- 女性 -->
             <div class="form__group-check">
                 <div class="form__input--check">
-                    <input type="checkbox" name="gender" value="{{ old('gender') }}" />
+                    <input type="radio" name="gender" value="{{ old('gender') }}" />
                     <span class="form__check--label">女性</span>
                 </div>
                 <div class="form__error">
@@ -76,7 +76,7 @@
             <!-- その他 -->
             <div class="form__group-check">
                 <div class="form__input--check">
-                    <input type="checkbox" name="gender" value="{{ old('gender') }}" />
+                    <input type="radio" name="gender" value="{{ old('gender') }}" />
                     <span class="form__check--label">その他</span>
                 </div>
                 <div class="form__error">
@@ -111,15 +111,15 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="tel" name="tel" placeholder="080" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel_1" placeholder="080" value="{{ old('tel') }}" />
                 </div>
                 <div class="tel_hyphen">-</div>
                 <div class="form__input--text">
-                    <input type="tel" name="tel" placeholder="1234" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel_2" placeholder="1234" value="{{ old('tel') }}" />
                 </div>
                 <div class="tel_hyphen">-</div>
                 <div class="form__input--text">
-                    <input type="tel" name="tel" placeholder="5678" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel_3" placeholder="5678" value="{{ old('tel') }}" />
                 </div>
                 <div class="form__error">
                     @error('email')
@@ -168,14 +168,19 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <select class="form__select--text"
+                <select class="create-form__item-select" name="category_id">
+                    @foreach ($categories as $category)
+                    <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                    @endforeach
+                </select>
+                <!-- <select class="form__select--text"
                     type="text" name="kinds" placeholder="選択してください" value="{{ old('kinds') }}">
                     <option value="deliver">商品のお届けについて</option>
                     <option value="exchange">商品の交換について</option>
                     <option value="trouble">商品のトラブルについて</option>
                     <option value="inquiry">ショップへの問い合わせ</option>
                     <option value="others">その他</option>
-                </select>
+                </select> -->
                 <div class="form__error">
                     @error('kinds')
                     {{ $message }}
