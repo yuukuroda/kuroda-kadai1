@@ -37,4 +37,4 @@ Laravel環境構築
 
 ## ER 図
 
-![ER図](ER.drawio.png)
+![ER図](ER.png)
