@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,10 @@ use App\Http\Controllers\ContactController;
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
+Route::get('/thanks', [ContactController::class, 'thanks']);
+Route::get('/register', [AuthController::class, 'create'])->name('register');
+Route::post('/register', [AuthController::class, 'store']);
+Route::get('/login', [AuthController::class, 'loginform'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/admin', [AdminController::class, 'admin'])->name('admin.index');
+Route::get('/search', [AdminController::class, 'search'])->name('admin.search');

@@ -40,4 +40,8 @@ class ContactController extends Controller
         Contact::create($contactData);
         return redirect('thanks');
     }
+    public function thanks()
+    {
+        return view('thanks');
+    }
 }
