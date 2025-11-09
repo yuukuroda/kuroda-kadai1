@@ -24,11 +24,14 @@ Laravel環境構築
 ・php artisan key:generate  
 ・php artisan db:seed  
 
+"The stream or file could not be opened"エラーが発生した場合  
+srcディレクトリにあるstorageディレクトリに権限を設定  
+chmod -R 777 storage
 ## URL
-・お問い合わせ画面：http://localhost/
-・ユーザー登録：http://localhost/register
-・ログイン：http://localhost/login
-・管理画面：http://localhost/admin
+・お問い合わせ画面：http://localhost/  
+・ユーザー登録：http://localhost/register  
+・ログイン：http://localhost/login  
+・管理画面：http://localhost/admin  
 
 ## 使用技術（実行環境）  
 ・php:8.1.33  
