@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
 
+</head>
+
+<body>
     <div class="thanks__content">
         <div class="thanks__heading">
             <h3>お問い合わせありがとうございました</h3>
@@ -20,3 +23,6 @@
             <a href="/" class="home__button-submit">HOME</a>
         </div>
     </div>
+</body>
+
+</html>

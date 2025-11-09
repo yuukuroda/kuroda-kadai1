@@ -23,5 +23,5 @@ Route::get('/register', [AuthController::class, 'create'])->name('register');
 Route::post('/register', [AuthController::class, 'store']);
 Route::get('/login', [AuthController::class, 'loginform'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/admin', [AdminController::class, 'admin'])->name('admin.index');
+Route::get('/admin', [AdminController::class, 'admin'])->name('admin.index');
 Route::get('/search', [AdminController::class, 'search'])->name('admin.search');
